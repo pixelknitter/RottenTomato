@@ -18,17 +18,23 @@ PODS:
   - AFNetworking/UIKit (2.2.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - JSONKit (1.5pre)
   - M13AsynchronousImageView (1.0.0)
   - M13ProgressSuite (1.2.3)
+  - Reachability (3.1.1)
 
 DEPENDENCIES:
   - AFNetworking (~> 2.0)
+  - JSONKit (~> 1.4)
   - M13AsynchronousImageView (~> 1.0)
   - M13ProgressSuite (~> 1.2.3)
+  - Reachability (~> 3.0)
 
 SPEC CHECKSUMS:
   AFNetworking: ab63e259fe91eef4519b371ef0a4955af0e73e64
+  JSONKit: efef3bbd3372ff33f96b9c6f34cf4fe18e74ab69
   M13AsynchronousImageView: 88e41619eb555ffea0e7443440ba5f19bda86f38
   M13ProgressSuite: c7e62c60468b021f12558f5797b9d280e642d5a6
+  Reachability: 8e9635e3cb4f98e7f825e51147f677ecc694d0e7
 
 COCOAPODS: 0.33.1

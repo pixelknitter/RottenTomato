@@ -1,5 +1,5 @@
 //
-//  MoviesViewController.h
+//  MovieDetailsViewController.h
 //  RottenTomato
 //
 //  Created by Eddie Freeman on 6/9/14.
@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 
-@interface MoviesViewController : UITableViewController
-
-@property (nonatomic, strong) NSArray *movies;
+@interface MovieDetailsViewController : UIViewController
 
 @end

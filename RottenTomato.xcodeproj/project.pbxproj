@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2C634F21194649AE00C39F8D /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C634F1F194649AE00C39F8D /* MovieCell.m */; };
+		2C634F22194649AE00C39F8D /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C634F20194649AE00C39F8D /* MovieCell.xib */; };
+		2C634F26194649EB00C39F8D /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C634F24194649EB00C39F8D /* MovieDetailsViewController.m */; };
+		2C634F27194649EB00C39F8D /* MovieDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C634F25194649EB00C39F8D /* MovieDetailsViewController.xib */; };
+		2C634F2A19464D5500C39F8D /* CastMember.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C634F2919464D5500C39F8D /* CastMember.m */; };
 		2C6F507919461E0E0089FE8D /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6F507819461E0E0089FE8D /* Foundation.framework */; };
 		2C6F507B19461E0E0089FE8D /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6F507A19461E0E0089FE8D /* CoreGraphics.framework */; };
 		2C6F507D19461E0E0089FE8D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2C6F507C19461E0E0089FE8D /* UIKit.framework */; };
@@ -37,6 +42,14 @@
 
 /* Begin PBXFileReference section */
 		009AF6FE0633435684BF7D26 /* libPods-RottenTomato.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-RottenTomato.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		2C634F1E194649AE00C39F8D /* MovieCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieCell.h; sourceTree = "<group>"; };
+		2C634F1F194649AE00C39F8D /* MovieCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieCell.m; sourceTree = "<group>"; };
+		2C634F20194649AE00C39F8D /* MovieCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieCell.xib; sourceTree = "<group>"; };
+		2C634F23194649EB00C39F8D /* MovieDetailsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MovieDetailsViewController.h; sourceTree = "<group>"; };
+		2C634F24194649EB00C39F8D /* MovieDetailsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MovieDetailsViewController.m; sourceTree = "<group>"; };
+		2C634F25194649EB00C39F8D /* MovieDetailsViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MovieDetailsViewController.xib; sourceTree = "<group>"; };
+		2C634F2819464D5500C39F8D /* CastMember.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CastMember.h; sourceTree = "<group>"; };
+		2C634F2919464D5500C39F8D /* CastMember.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CastMember.m; sourceTree = "<group>"; };
 		2C6F507519461E0E0089FE8D /* RottenTomato.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RottenTomato.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2C6F507819461E0E0089FE8D /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		2C6F507A19461E0E0089FE8D /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -86,6 +99,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2C634F2B1946545F00C39F8D /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				2C634F1E194649AE00C39F8D /* MovieCell.h */,
+				2C634F1F194649AE00C39F8D /* MovieCell.m */,
+				2C634F20194649AE00C39F8D /* MovieCell.xib */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
 		2C6F506C19461E0E0089FE8D = {
 			isa = PBXGroup;
 			children = (
@@ -122,6 +145,7 @@
 			isa = PBXGroup;
 			children = (
 				2C6F50A8194623AA0089FE8D /* Models */,
+				2C634F2B1946545F00C39F8D /* Views */,
 				2C6F50A7194623A20089FE8D /* View Controllers */,
 				2C6F508719461E0E0089FE8D /* AppDelegate.h */,
 				2C6F508819461E0E0089FE8D /* AppDelegate.m */,
@@ -166,6 +190,9 @@
 				2C6F50AD19463BBE0089FE8D /* MoviesViewController.h */,
 				2C6F50AE19463BBE0089FE8D /* MoviesViewController.m */,
 				2C6F50AF19463BBE0089FE8D /* MoviesViewController.xib */,
+				2C634F23194649EB00C39F8D /* MovieDetailsViewController.h */,
+				2C634F24194649EB00C39F8D /* MovieDetailsViewController.m */,
+				2C634F25194649EB00C39F8D /* MovieDetailsViewController.xib */,
 			);
 			name = "View Controllers";
 			sourceTree = "<group>";
@@ -175,6 +202,8 @@
 			children = (
 				2C6F50AA19462DDD0089FE8D /* Movie.h */,
 				2C6F50AB19462DDD0089FE8D /* Movie.m */,
+				2C634F2819464D5500C39F8D /* CastMember.h */,
+				2C634F2919464D5500C39F8D /* CastMember.m */,
 			);
 			name = Models;
 			sourceTree = "<group>";
@@ -257,8 +286,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				2C6F508319461E0E0089FE8D /* InfoPlist.strings in Resources */,
+				2C634F22194649AE00C39F8D /* MovieCell.xib in Resources */,
 				2C6F50B119463BBE0089FE8D /* MoviesViewController.xib in Resources */,
 				2C6F508B19461E0E0089FE8D /* Images.xcassets in Resources */,
+				2C634F27194649EB00C39F8D /* MovieDetailsViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -310,9 +341,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2C634F21194649AE00C39F8D /* MovieCell.m in Sources */,
 				2C6F50AC19462DDD0089FE8D /* Movie.m in Sources */,
 				2C6F508919461E0E0089FE8D /* AppDelegate.m in Sources */,
 				2C6F508519461E0E0089FE8D /* main.m in Sources */,
+				2C634F2A19464D5500C39F8D /* CastMember.m in Sources */,
+				2C634F26194649EB00C39F8D /* MovieDetailsViewController.m in Sources */,
 				2C6F50B019463BBE0089FE8D /* MoviesViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

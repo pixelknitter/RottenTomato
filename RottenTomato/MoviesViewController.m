@@ -7,8 +7,11 @@
 //
 
 #import "MoviesViewController.h"
+#import "MovieDetailsViewController.h"
+#import "MovieCell.h"
 
 @interface MoviesViewController ()
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -16,47 +19,60 @@
 
 - (void)viewDidLoad
 {
-    [super viewDidLoad];
+  [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
+  // Uncomment the following line to preserve selection between presentations.
+  // self.clearsSelectionOnViewWillAppear = NO;
+  
+  // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+  // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+  
+  NSString *url = @"http://api.rottentomatoes.com/api/public/v1.0/lists/dvds/top_rentals.json?apikey=g9au4hv6khv6wzvzgt55gpqs";
+  
+  NSURLRequest *request = [NSURLRequest requestWithURL:[NSURL URLWithString:url]];
+  [NSURLConnection sendAsynchronousRequest:request queue:[NSOperationQueue mainQueue] completionHandler:^(NSURLResponse *response, NSData *data, NSError *connectionError) {
+    id object = [NSJSONSerialization JSONObjectWithData:data options:0 error:nil];
+    NSLog(@"%@", object);
     
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.movies = object[@"movies"];
+    
+    [self.tableView reloadData];
+  }];
+  
+  
+  self.tableView.dataSource = self;
+  self.tableView.rowHeight = 130;
+  
+  [self.tableView registerNib:[UINib nibWithNibName:@"MovieCell" bundle:nil] forCellReuseIdentifier:@"MovieCell"];
 }
 
 - (void)didReceiveMemoryWarning
 {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+  [super didReceiveMemoryWarning];
+  // Dispose of any resources that can be recreated.
 }
 
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
-#warning Potentially incomplete method implementation.
     // Return the number of sections.
     return 0;
 }
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-#warning Incomplete method implementation.
-    // Return the number of rows in the section.
-    return 0;
+    return self.movies.count;
 }
 
-/*
+
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:<#@"reuseIdentifier"#> forIndexPath:indexPath];
-    
-    // Configure the cell...
-    
-    return cell;
+    MovieCell *movieCell = [tableView dequeueReusableCellWithIdentifier:@"MovieCell" forIndexPath:indexPath];
+  
+    return movieCell;
 }
-*/
+
 
 /*
 // Override to support conditional editing of the table view.
@@ -96,7 +112,7 @@
 }
 */
 
-/*
+
 #pragma mark - Table view delegate
 
 // In a xib-based application, navigation from a table can be handled in -tableView:didSelectRowAtIndexPath:
@@ -104,13 +120,12 @@
 {
     // Navigation logic may go here, for example:
     // Create the next view controller.
-    <#DetailViewController#> *detailViewController = [[<#DetailViewController#> alloc] initWithNibName:<#@"Nib name"#> bundle:nil];
+    MovieDetailsViewController *detailViewController = [[MovieDetailsViewController alloc] initWithNibName:@"MovieDetailsViewController" bundle:nil];
     
-    // Pass the selected object to the new view controller.
+    // Pass the selected object to the new view controller. TODO
     
     // Push the view controller.
     [self.navigationController pushViewController:detailViewController animated:YES];
 }
-*/
 
 @end

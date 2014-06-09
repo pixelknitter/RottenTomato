@@ -7,16 +7,22 @@
 //
 
 #import "AppDelegate.h"
+#import "MoviesViewController.h"
 
 @implementation AppDelegate
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
-    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // Override point for customization after application launch.
-    self.window.backgroundColor = [UIColor whiteColor];
-    [self.window makeKeyAndVisible];
-    return YES;
+  self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+  // Override point for customization after application launch.
+
+  MoviesViewController *vc = [[MoviesViewController alloc] init];
+  UINavigationController *nvc = [[UINavigationController alloc] initWithRootViewController:vc];
+    self.window.rootViewController = nvc;
+  
+  self.window.backgroundColor = [UIColor whiteColor];
+  [self.window makeKeyAndVisible];
+  return YES;
 }
 
 - (void)applicationWillResignActive:(UIApplication *)application
