@@ -184,10 +184,10 @@ static NSString * const BaseURLString = @"http://api.rottentomatoes.com/api/publ
   CGRect frameRect = self.tableView.frame;
   frameRect.size.height = 20;
   // Create View
-  UIView *errorView = [[UIView alloc] initWithFrame:frameRect];
-  errorView.backgroundColor = [UIColor colorWithRed:255/255.0f green:59/255.0f blue:37/255.0f alpha:1.0f]; // Red-Orange
-  errorView.alpha = 0.85;
-  errorView.hidden = true;
+  self.errorView = [[UIView alloc] initWithFrame:frameRect];
+  self.errorView.backgroundColor = [UIColor colorWithRed:255/255.0f green:59/255.0f blue:37/255.0f alpha:1.0f]; // Red-Orange
+  self.errorView.alpha = 0.90;
+  self.errorView.hidden = true;
   
   // Add Message Label
   UILabel *messageLabel = [[UILabel alloc] initWithFrame:self.errorView.frame];
@@ -196,9 +196,9 @@ static NSString * const BaseURLString = @"http://api.rottentomatoes.com/api/publ
   messageLabel.textAlignment = NSTextAlignmentCenter;
   messageLabel.tag = 100;
   
-  [errorView addSubview:messageLabel];
+  [self.errorView addSubview:messageLabel];
   
-  return errorView;
+  return self.errorView;
 }
 
 - (void) showError:(ErrorType)type {
@@ -210,12 +210,13 @@ static NSString * const BaseURLString = @"http://api.rottentomatoes.com/api/publ
     case Network:
       message = @"Network Error";
     default:
+//      message = @"An Error has Occurred";
       break;
   }
   // Set Message Text
   UILabel *messageLabel = (UILabel*)[self.errorView viewWithTag:100];
   messageLabel.text = message;
-  
+  NSLog(@"%@", messageLabel.text);
   // Unhide Error View
   self.errorView.hidden = false;
   
