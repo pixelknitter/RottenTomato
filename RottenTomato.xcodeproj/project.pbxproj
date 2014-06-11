@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-
 		2C634F21194649AE00C39F8D /* MovieCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C634F1F194649AE00C39F8D /* MovieCell.m */; };
 		2C634F22194649AE00C39F8D /* MovieCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2C634F20194649AE00C39F8D /* MovieCell.xib */; };
 		2C634F26194649EB00C39F8D /* MovieDetailsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 2C634F24194649EB00C39F8D /* MovieDetailsViewController.m */; };
@@ -83,7 +82,6 @@
 				2C6F507B19461E0E0089FE8D /* CoreGraphics.framework in Frameworks */,
 				2C6F507D19461E0E0089FE8D /* UIKit.framework in Frameworks */,
 				2C6F507919461E0E0089FE8D /* Foundation.framework in Frameworks */,
-
 				65B8427FD6E249DFA33193CA /* libPods-RottenTomato.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -101,7 +99,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-
 		2C634F2B1946545F00C39F8D /* Views */ = {
 			isa = PBXGroup;
 			children = (
@@ -140,7 +137,6 @@
 				2C6F507C19461E0E0089FE8D /* UIKit.framework */,
 				2C6F509119461E0E0089FE8D /* XCTest.framework */,
 				009AF6FE0633435684BF7D26 /* libPods-RottenTomato.a */,
-
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -148,7 +144,6 @@
 		2C6F507E19461E0E0089FE8D /* RottenTomato */ = {
 			isa = PBXGroup;
 			children = (
-
 				2C6F50A8194623AA0089FE8D /* Models */,
 				2C634F2B1946545F00C39F8D /* Views */,
 				2C6F50A7194623A20089FE8D /* View Controllers */,
