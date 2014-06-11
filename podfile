@@ -4,10 +4,8 @@
 target "RottenTomato" do
 
 pod "AFNetworking", "~> 2.0"
-pod "M13AsynchronousImageView", "~> 1.0"
 pod "M13ProgressSuite", "~> 1.2.3"
-pod 'JSONKit',       '~> 1.4'
-pod 'Reachability',  '~> 3.0'
+pod "DejalActivityView", "~> 1.2"
 
 end
 

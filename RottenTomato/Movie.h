@@ -19,6 +19,7 @@
 @property (nonatomic, strong) NSDictionary *releaseDates;
 @property (nonatomic, strong) NSDictionary *ratings;
 @property (nonatomic, strong) NSArray *abridgedCast;
+@property (nonatomic, strong) NSString *criticsConsensus;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 + (NSArray *)moviesWithArray:(NSArray *)array;

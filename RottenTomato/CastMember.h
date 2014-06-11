@@ -12,8 +12,7 @@
 
 @property (nonatomic, strong) NSString *name;
 @property (nonatomic, strong) NSArray *characters;
-//@property (nonatomic, strong) NSString imdbURL;
-//@property (nonatomic) NSInteger ID;
+@property (nonatomic) NSInteger castID;
 
 - (id)initWithDictionary:(NSDictionary *)dictionary;
 + (NSArray *)castWithArray:(NSArray *)array;

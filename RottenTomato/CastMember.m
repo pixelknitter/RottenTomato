@@ -15,6 +15,7 @@
   if (self) {
     self.name = dictionary[@"name"];
     self.characters = dictionary[@"characters"];
+//    self.castID = dictionary[@""];
   }
   
   return self;

@@ -7,9 +7,12 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFNetworking.h"
 
 @interface MoviesViewController : UITableViewController
 
-@property (nonatomic, strong) NSArray *movies;
+- (void)requestMovieData;
+
+@property (nonatomic, weak) NSString* dataSource;
 
 @end

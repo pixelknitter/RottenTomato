@@ -7,7 +7,11 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Movie.h"
+#import "M13ProgressViewSegmentedRing.h"
 
 @interface MovieDetailsViewController : UIViewController
+
+@property (nonatomic, strong) Movie *movie;
 
 @end

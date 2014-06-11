@@ -7,21 +7,27 @@
 //
 
 #import "Movie.h"
+#import "CastMember.h"
 
 @implementation Movie
 
 - (id)initWithDictionary:(NSDictionary *)dictionary {
   self = [super init];
   if (self) {
+    // Straight Values Yo
     self.title = dictionary[@"title"];
     self.mpaaRating = dictionary[@"mpaa_rating"];
     self.runtime = [dictionary[@"runtime"] integerValue];
-    self.synopsis = dictionary[@"synposis"];
+    self.synopsis = dictionary[@"synopsis"];
+    self.criticsConsensus = dictionary[@"critics_consensus"];
     self.year = dictionary[@"year"];
     
+    // CastMembers Array
+    self.abridgedCast = [CastMember castWithArray:dictionary[@"abridge_cast"]];
+    
+    // Dictionaries
     self.releaseDates = dictionary[@"release_dates"];
     self.ratings = dictionary[@"ratings"];
-    self.abridgedCast = dictionary[@"abridge_cast"];
     self.posters = dictionary[@"posters"];
   }
   
