@@ -27,6 +27,6 @@ Spent some time working on cleaning up my code base and mixing things between pr
 
 Walkthrough of all user stories:
 
-![Video Walkthrough](https://www.dropbox.com/s/vmw64zsynaew3d0/demo_rotten_tomatoes.gif)
+[Video Walkthrough](https://www.dropbox.com/s/vmw64zsynaew3d0/demo_rotten_tomatoes.gif)
 
 GIF created with [LiceCap](http://www.cockos.com/licecap/).
