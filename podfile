@@ -1,0 +1,15 @@
+# Uncomment this line to define a global platform for your project
+# platform :ios, "6.0"
+
+target "RottenTomato" do
+
+pod "AFNetworking", "~> 2.0"
+pod "M13ProgressSuite", "~> 1.2.3"
+pod "DejalActivityView", "~> 1.2"
+
+end
+
+target "RottenTomatoTests" do
+
+end
+

@@ -7,6 +7,13 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "AFNetworking.h"
+
+typedef enum {
+  TopRentals = 1,
+  BoxOffice = 2,
+  Search = 3
+} DataSource;
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
